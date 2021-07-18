@@ -12,18 +12,20 @@ const Profile = ({
 }) => {
     return (
         <div class="profile">
-        <div class="description">
-            <img
-                src={avatar}
+        <div  class="description">
+                <img 
+                    src={avatar}
+                    width="200px"
+            
                 alt="Аватар пользователя"
-                class="avatar"
+                class="avatar" 
             />
             <p class="name">{name}</p>
             <p class="tag">@{tag}</p>
             <p class="location">{location}</p>
         </div>
 
-        <ul class="stats">
+        <ul>
             <li>
                 <span class="label">Followers</span>
                 <span class="quantity"> {followers}</span>
@@ -43,11 +45,11 @@ const Profile = ({
 };
     
 Profile.propTypes = {
-    name: PropTypes.string,
-    tag: PropTypes.string,
-    avatar: PropTypes.string,
-    location: PropTypes.string,
-    stats: PropTypes.number
+    name: PropTypes.string.isRequired,
+    tag: PropTypes.string.isRequired,
+    avatar: PropTypes.string.isRequired,
+    location: PropTypes.string.isRequired,
+    stats: PropTypes.number.isRequired
 
 };
 
